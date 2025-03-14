@@ -11,3 +11,4 @@ logs/
 data/
 hosts/
 www/
+.python-version
