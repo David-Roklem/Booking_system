@@ -19,7 +19,7 @@ class Settings(BaseSettings):
         self.DB_URL = self.__construct_db_url()
 
     def __construct_db_url(self) -> str:
-        return (f"postgresql+psycopg://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@"
+        return (f"postgresql+psycopg2://{self.POSTGRES_USER}:{self.POSTGRES_PASSWORD}@"
                 f"{self.POSTGRES_HOST}:{self.POSTGRES_PORT}/{self.POSTGRES_DB}")
 
 
