@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr, Field, UUID4
 from datetime import datetime
 
 
@@ -14,7 +14,7 @@ class PlaceSchema(BaseModel):
 
 
 class BookingSchema(BaseModel):
-    user_id: int
-    place_id: int
-    start_time: datetime = Field(datetime)
-    end_time: datetime = Field(datetime)
+    user_id: UUID4
+    place_id: UUID4
+    start_time: datetime = Field(datetime.now().isoformat())
+    end_time: datetime = Field(datetime.now().isoformat())
